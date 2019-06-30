@@ -1,0 +1,5 @@
+<workbench>
+	<plug-in>rete_idrica.Login</plug-in>
+	<plug-in>rete_idrica.Valvola</plug-in>
+	<plug-in>rete_idrica.Logout</plug-in>	
+</workbench>

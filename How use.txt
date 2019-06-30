@@ -1,0 +1,34 @@
+SISTEMA INFORMATIVO PER UNA RETE IDRICA
+
+Prototipo sviluppato da Davide Martini e Simone Nigro
+
+Il prototipo del progetto è diviso in tre parti:
+	- base di dati
+	- applicativo web
+	- plug-in OpenJump
+
+Installazione locale:
+
+- Base di dati:
+		- Installare PostgreSQL
+		- Installare estensione PostGIS
+		- Effettuare login da terminale 'psql -U username -h localhost' dove al posto di username sarà presente il proprio username	
+		- Creare un database 'CREATE DATABASE nomedb;' sul quale verranno importati i dati (al posto di nomedb ci sarà il nome reale del database)
+		- Effettuare logout
+		- Da terminale spostarsi nella cartella dove è presente il file 'rete_idrica.sql' e eseguire il comando 'psql -U username -h localhost nomedb < rete_idrica.sql' dove al posto di username e nomedb ci saranno i valori scelti
+
+- Applicativo web:
+		- Installare XAMPP
+		- Avviare il servizio Apache Web Server
+		- Inserire nella cartella 'htdocs' presente nella cartella di installazione di XAMPP la cartella 'Applicativo Web'
+		- Aprire un browser all'indirizzo 'localhost/Applicativo Web/login.php'
+		- La pagina iniziale è la pagina 'login.php', occorre eseguire l'accesso o la registrazione per poter accedere al servizio di inserimento o visualizzazione delle segnalazioni
+		- Le credenziali di test da poter usare per il ruolo di amministratore e utente semplice sono riportate nel file 'utenti.txt'
+
+- Plug-in OpenJump:
+		- Installare OpenJump
+		- Installare Eclipse
+		- Importare in Eclipse il progetto contenuto all'interno della cartella 'Plug-in'
+		- Modificare l'opzione 'Build path' importando i file '*.jar' contenuti nel percorso 'Plug-in/Rete_idrica/import/'. Le librerie necessarie sono contenute in quella cartella
+		- Eseguire il progetto
+		- All'apertura di OpenJump selezionare il menù a tendina 'Rete Idrica' ed effettuare il login
